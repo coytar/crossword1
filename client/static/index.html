@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Crossword Factory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet">
+    <link href="styles2.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <input type="text" id="hiddenInput" style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; opacity: 0;">
+    <div id="main-container" style="text-align: center;">
+        <h1>Crossword Factory</h1>
+        <div id="signature">
+            Version 2 - as a fullstack app</a>
+        </div>
+        <h2 id="puzzle-title">Harry Potter Puzzle 1/2: Humble Beginnings.</h2>
+        <div id="progress-message"></div>
+        <div id="crossword-grid"><table id="crossword-table"><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="number-overlay">2</span></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><span class="number-overlay">1</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="number-overlay">4</span></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="number-overlay">10</span></td><td></td><td></td></tr><tr><td></td><td></td><td><span class="number-overlay">8</span></td><td></td><td></td><td></td><td><span class="number-overlay">6</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><span class="number-overlay">5</span></td><td></td><td></td><td></td><td></td><td><span class="number-overlay">7</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td><span class="number-overlay">3</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="number-overlay">9</span></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+        <h2>Puzzle Key</h2>
+        <div id="progress-key-grid" style="display: inline-block;">
+            <!-- Progress key cells will be generated here -->
+            <!-- <div data-index="0" style="cursor: pointer;"></div><div data-index="1" style="cursor: pointer;"></div><div data-index="2" style="cursor: pointer;"></div><div data-index="3" style="cursor: pointer;"></div> -->
+        </div>
+        <br>
+        <br>
+        <h2>Hints</h2>
+        <div id="hints"><p>1. <span class="orientation-color">Horizontal</span>: A suburban drive, mundane in sight, veiling a wizard from muggle plight.</p><p>2. <span class="orientation-color">Vertical</span>: He who must not be named, in darkness spreads his fame; a shadow over magical lands, only faced by brave wizarding wands.</p><p>3. <span class="orientation-color">Horizontal</span>: Amongst spells and charms, their kind walk unseen, in a world of wonder, one has never been.</p><p>4. <span class="orientation-color">Vertical</span>: A cousin not so kind, in a house of muggles entwined; his presence, often like a thud, amidst the world of magical mud.</p><p>5. <span class="orientation-color">Horizontal</span>: A mark of legend, not of harm; a lightning strike, a wizard’s charm. On a young hero’s brow it sits, a symbol of his fateful wits.</p><p>6. <span class="orientation-color">Vertical</span>: In the young wizard’s name, a legacy intertwined, a father’s first, in his son’s middle, you’ll find.</p><p>7. <span class="orientation-color">Horizontal</span>: A giant in heart, a guardian so true, first to welcome Harry into a world anew.</p><p>8. <span class="orientation-color">Vertical</span>: Wisdom vast and a beard so white, Hogwarts’ leader, a guiding light. Cloaked in mystery and ancient ends, in halls of magic, he’s more than a friend.</p><p>9. <span class="orientation-color">Horizontal</span>: A mother’s embrace in a floral guise, her name lives on in her son’s emerald eyes.</p><p>10. <span class="orientation-color">Vertical</span>: Snowy companion, silent wings in the night, bearer of secrets under the moon’s light. Loyal and true, with eyes wide and bright, a feathered friend in a young wizard’s plight.</p></div>
+        <p><!-- Instructions go here --></p>
+        <div id="special-note" style="display: none;">
+            <strong>Hidden Secret:</strong> Test: Secret. You found me. 🧩✨
+        </div>
+        <br>
+        <h2>How to play</h2>
+        <div id="instructions">
+            <ol>
+                <li>Best experience: Desktop 90% Zoom. Extensively tested for mobile too.</li>
+                <li>Review the list of crossword hints above.</li>
+                <li>Select a matching hint number on the crossword grid.</li>
+                <li>The length of the word is auto highlighted in red.</li>
+                <li>Start inputting letters to your answer.</li>
+                <li>Answers are automatically checked as you type. Pretty cool, right?</li>
+                <li>If the answer is correct, the word will be highlighted in green.</li>
+                <li>If incorrect, the highlight remains red while selection is active.</li>
+                <li>You can always return to a word and solve it by selecting its number.</li>
+                <li>Ensure that you type the word in full even letter cross.</li>
+                <li>Once all solved words turn green, you will be presented with a key.</li>
+                <li>Store this key in a cool dry place. It is your key to the next puzzle.</li>
+                <li>Enter your key in the Puzzle Key field to load your progress.</li>
+            </ol>
+        </div>
+        <br>
+        <h2>Troubleshooting</h2>
+        <div id="known-bugs">
+            <ul>
+                <li>Crossword input starts at a random cell in middle of the highlighted cells or no letters appear for
+                    a few key strokes. If this happens, please keep inputting test letters and the crossword grid will
+                    correct itself. The character input will loop around to the starting cell. And you can input the
+                    desired answer.</li>
+                <li>If you select the Puzzle Key field to input a Puzzle Key but choose not to proceed. And return to
+                    the crossword on display, your crossword input can temporarily mirror in the Puzzle Key field too.
+                    This is will correct itself and shouldn't affect puzzle solving.</li>
+                <li>In the unlikely event of water landing on your phone or computer, you can always reload the page,
+                    enter the most recent most recent Puzzle Key you unlocked and continue your progress.</li>
+                <li>When text is being input into the crossword grid or Puzzle Key, the scrolling can reset to the top
+                    of the page. Thank you for your patience on this. Please keep typing. The program is still accepting
+                    input.</li>
+                <li>For technical or comedic assistance, you may always contact me. I'd be delighted to assist you.
+                    🤙😊🧩
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="congrats-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">×</span>
+            <p id="congrats-message"></p>
+        </div>
+    </div>
+    <footer id="custom-footer">| Version 1.0.0 |<br>| Crossword Factory. Designed by Chaitanya.|<br>| © All
+        Rights
+        and Lefts
+        Reserved. |
+    </footer>
+    <script src="main.js" ></script>
+        
+</body></html>

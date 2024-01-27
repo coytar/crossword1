@@ -1,0 +1,15 @@
+version: "3.4"
+services:
+  server:
+    container_name: puzzle1be
+    build: ./server
+    ports:
+      - "9001:3001"
+
+  client:
+    container_name: puzzle1fe
+    build: ./client
+    ports:
+      - "9000:8080"
+    depends_on:
+      - server

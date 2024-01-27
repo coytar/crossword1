@@ -1,0 +1,324 @@
+/* CSS Styles */
+/* Body, Headings, and Footer */
+
+body {
+    color: #eae2b7;
+    font-family: "Merriweather", serif;
+    background-color: #003049;
+    font-size: 16px;
+    /* Adjust for readability */
+  }
+  
+  h1,
+  h2 {
+    text-align: center;
+  }
+  
+  #main-container h1 {
+    color: #d62828;
+    font-family: "Pacifico", cursive;
+    font-size: 3rem;
+    /* Use rem for scalability */
+    margin-bottom: 0;
+    /* text-shadow:
+                  -1px -1px 0 #f77f00,
+                  1px -1px 0 #f77f00,
+                  -1px 1px 0 #f77f00,
+                  1px 1px 0 #f77f00;
+              Simulating text outline with text-shadow */
+  }
+  
+  h2,
+  #custom-footer {
+    color: #fcbf49;
+    /* New color for H2 headings and custom footer */
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    #main-container h1 {
+      font-size: 2.5rem;
+    }
+  
+    footer,
+    #custom-footer {
+      font-size: 1rem;
+    }
+  }
+  
+  @media only screen and (max-width: 375px) {
+    body {
+      font-size: 14px;
+    }
+  
+    #main-container h1 {
+      font-size: 2rem;
+    }
+  
+    footer,
+    #custom-footer {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Crossword Grid & Elements */
+  #crossword-grid table {
+    border-collapse: separate;
+    /* Keep borders separate */
+    margin: auto;
+  }
+  
+  #crossword-grid td {
+    border: 1px solid #f77f00;
+    width: 2rem;
+    /* Width of the cell */
+    height: 2rem;
+    /* Height of the cell */
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    #crossword-grid td {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  
+  @media only screen and (max-width: 375px) {
+    #crossword-grid td {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+  
+  .number-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.75rem;
+    /* Use rem */
+    color: #eae2b7;
+  }
+  
+  #progress-key-grid div {
+    display: inline-block;
+    border: 1px solid #f77f00;
+    width: 2rem;
+    /* Using rem for scalability */
+    height: 2rem;
+    /* Keeping width and height the same for square cells */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2rem;
+    /* Align text vertically */
+    font-size: 1rem;
+    /* Adjust font size as needed */
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 375px) {
+    #progress-key-grid div {
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  #hints,
+  #progress-key-grid,
+  #progress-message,
+  #instructions,
+  #known-bugs,
+  #special-note {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    max-width: 90%;
+    /* Relative width */
+  }
+  
+  @media only screen and (max-width: 375px) {
+    #crossword-grid td {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  
+    .number-overlay {
+      font-size: 0.6rem;
+    }
+  
+    #hints,
+    #progress-key-grid,
+    #progress-message,
+    #instructions,
+    #known-bugs,
+    #special-note {
+      max-width: 100%;
+    }
+  }
+  
+  .orientation-color {
+    color: #fcbf49;
+    /* Color for 'Horizontal' and 'Vertical' text */
+  }
+  
+  /* Popups and Special Elements */
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .popup-content,
+  .congratulations-popup {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    /* Limit max width */
+  }
+  
+  .congratulations-popup {
+    background-color: #335c67;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  
+  .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 375px) {
+    .popup-content,
+    .congratulations-popup {
+      width: 90%;
+    }
+  }
+  
+  /* Content Specific Styles */
+  #hints,
+  #instructions,
+  #known-bugs,
+  #special-note {
+    margin: 20px auto;
+    text-align: left;
+    padding-right: 20px;
+    /* Right padding */
+  }
+  
+  /* Adjusting max width based on screen sizes */
+  @media only screen and (min-width: 769px) {
+    /* For desktop screens */
+    #hints,
+    #instructions,
+    #known-bugs,
+    #special-note {
+      max-width: 600px;
+      /* Adjust this value to match your crossword grid */
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    /* For smaller screens */
+    #hints,
+    #instructions,
+    #known-bugs,
+    #special-note {
+      max-width: 100%;
+      padding-right: 10px;
+      /* Adjust right padding for smaller screens */
+    }
+  }
+  
+  #hints ol,
+  #instructions ol,
+  #known-bugs ul,
+  #special-note {
+    padding-left: 20px;
+  }
+  
+  #instructions li,
+  #known-bugs li {
+    margin-bottom: 20px;
+    /* Increased vertical gap between bullet points */
+  }
+  
+  /* Separate styling for special-note color */
+  #special-note {
+    color: #f77f00;
+    /* Replace with your desired color */
+  }
+  
+  /* Progress Message Styles */
+  #progress-message {
+    margin-top: 20px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #d62828;
+    margin-bottom: 20px;
+    /* Space below the message */
+  }
+  
+  /* Signature Styles */
+  #signature {
+    font-family: "Pacifico", cursive;
+    color: #a7c957;
+    /* Your chosen color for signature text */
+    text-align: center;
+    font-size: 1.4rem;
+    /* 1.125 Adjusted to rem for consistency */
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* Increased bottom margin for better spacing */
+  }
+  
+  /* Email Link Styles within Signature */
+  .email-link {
+    color: #fcbf49;
+    /* Your chosen color for email link */
+    text-decoration: none;
+    /* Removes underline */
+  }
+  
+  .email-link:hover {
+    text-decoration: underline;
+    /* Adds underline on hover */
+  }
