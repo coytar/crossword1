@@ -9,12 +9,12 @@ app.use(express.json());
 // enabling CORS for any unknown origin(https://xyz.example.com)
 app.use(cors());
 
-app.use((_req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', '*');
+// app.use((_req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header('Access-Control-Allow-Headers', '*');
 
-  next();
-});
+//   next();
+// });
 
 // sample api routes for testing
 app.get("/", (req, res) => {
